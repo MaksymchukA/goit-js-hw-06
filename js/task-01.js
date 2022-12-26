@@ -1,5 +1,13 @@
-const listEl = document.querySelector("ul");
-console.log("🚀 ~ listEl", listEl);
+const listEl = document.querySelector("#categories");
 
-const itemEl = document.querySelector(".item");
-console.log("🚀 ~ itemEl", itemEl);
+const itemElLength = listEl.children.length;
+console.log(`Number of categories: ${itemElLength}`);
+
+const itemEl = document.querySelectorAll("li.item");
+
+itemEl.forEach((item) => {
+const titleEl = item.firstElementChild.textContent;
+const elem = item.lastElementChild.children.length;
+console.log(`Category: ${titleEl}`);
+console.log(`Elements: ${elem}`);
+});
